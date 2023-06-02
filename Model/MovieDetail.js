@@ -102,7 +102,8 @@ const movieDetailsSchema = new Schema(
         }
     }
     ,
-    { collection: "movieDetails" });
+    { collection: "movieDetails" }
+);
 
 
 // Mongoose erstellt automatisch collection Namen
@@ -110,6 +111,7 @@ const movieDetailsSchema = new Schema(
 
 // wenn wir im Schema ein zweites object (options) 
 // übergeben können wir den Collection Name angeben
-const MovieDetail = model("MovieDetail", movieDetailsSchema);
 
-export default MovieDetail;
+export const MovieDetail = model("MovieDetail", movieDetailsSchema);
+
+// export default MovieDetail;

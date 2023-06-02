@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
-import MovieDetail from "./mongoose-first-steps/Models/MovieDetail.js";
+import { MovieDetail } from "./Model/MovieDetail.js";
 
 
 mongoose.connect("mongodb://127.0.0.1:27017/video")
-// .then((connection) => console.log("Connected"));
+    .then((connection) => console.log("Connected"));
+
 
 
 // -------lvl_1-2_quering-mit-mongoose -------------
@@ -29,7 +30,7 @@ const movies2 = await MovieDetail.find(
     { "tomato.userReviews": -1 },
     { limit: 20 });
 
-console.log(movies2);
+// console.log(movies2);
 
 
 // ----------------- 3 ----------------------------- 
@@ -40,7 +41,7 @@ const movies3 = await MovieDetail.find(
     { title: 1, year: 1 },
     {});
 
-console.log(movies3);
+// console.log(movies3);
 
 
 // ----------------- 4 ----------------------------- 
@@ -51,7 +52,7 @@ const movies4 = await MovieDetail.find(
     { title: 1, director: 1 },
     {});
 
-console.log(movies4);
+// console.log(movies4);
 
 
 // ----------------- 5 ----------------------------- 
@@ -63,7 +64,7 @@ const movies5 = await MovieDetail.find(
     { "tomato.userReviews": 1 },
     { limit: 10 });
 
-console.log(movies5);
+// console.log(movies5);
 
 
 // ----------------- 6 ----------------------------- 
@@ -74,7 +75,7 @@ const movies6 = await MovieDetail.find(
     null,
     null);
 
-console.log(movies6);
+// console.log(movies6);
 
 
 // ----------------- 7 ----------------------------- 
@@ -85,7 +86,7 @@ const movies7 = await MovieDetail.find(
     { title: 1, "imdb.rating": 1 },
     null);
 
-console.log(movies7);
+// console.log(movies7);
 
 
 // ----------------- 8 ----------------------------- 
@@ -96,7 +97,7 @@ const movies8 = await MovieDetail.find(
     null,
     { "imdb.rating": -1 });
 
-console.log(movies8);
+// console.log(movies8);
 
 
 // ----------------- 9 ----------------------------- 
@@ -108,7 +109,7 @@ const movies9 = await MovieDetail.find(
     { "imdb.rating": -1 },
     { limit: 10 });
 
-console.log(movies9);
+// console.log(movies9);
 
 
 // ----------------- 10 ----------------------------- 
@@ -120,7 +121,7 @@ const movies10 = await MovieDetail.find(
     { "imdb.rating": 1 },
 );
 
-console.log(movies10);
+// console.log(movies10);
 
 
 // --------------------------------------------------
